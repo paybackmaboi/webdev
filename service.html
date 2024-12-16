@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #111;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .logo-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-right: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .left-nav {
+            flex-grow: 1;
+        }
+
+        .right-nav {
+            display: flex;
+        }
+
+        .intro {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #e0e0e0; /* Light gray background */
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            margin: 0;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .service-item {
+            width: 45%;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .service-item h2 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            background-color: #111;
+            color: white;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="own.jpg" alt="">
+            <span class="logo-text">TANESA GARAGE</span>
+        </div>
+        <nav class="left-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Ownership</a></li>
+            </ul>
+        </nav>
+        <nav class="right-nav">
+            <ul>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>Our Services</h1>
+            <p>We offer a wide range of services to meet your needs. We’re not just selling cars; we’re delivering experiences. From the latest models to reliable pre-owned vehicles, our passion is to help you find the perfect ride that fits your lifestyle and aspirations. With exceptional service and expert guidance every step of the way, we ensure your journey starts with confidence and ends with satisfaction. Discover the joy of driving with us—where quality meets trust, and dreams meet the road.</p>
+        </section>
+        <section class="services">
+            <div class="service-item">
+                <h2>BRANDING</h2>
+                <img src="lamba.jpg" alt="Branding">
+            </div>
+            <div class="service-item">
+                <h2>UI/UX</h2>
+                <img src="ux.jpg" alt="UI/UX">
+            </div>
+            <!-- Add more service items as needed -->
+        </section>
+    </main>
+</body>
+</html>

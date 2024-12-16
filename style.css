@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust size */
+    width: 50px; /* Ensure it's a square */
+    border-radius: 50%; /* Make it round */
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 100px; /* Add space between logo text and nav */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Space between nav items */
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.left-nav {
+    flex-grow: 1;
+}
+
+.right-nav {
+    display: flex;
+}
+
+.hero {
+    position: relative;
+    background-image: url('lambo.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+}
+
+.scroll-icon img {
+    height: 30px; /* Adjust as needed */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}   
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+
+.additional-section {
+    padding: 60px 20px;
+    background-image: url('lamba.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.additional-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.additional-section p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+
+
+
+
+
+
+.additional-section {
+    padding: 60px 20px;
+    background-image: url('your-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.additional-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.additional-section p {
+    font-size: 1.2em;
+    margin: 0 0 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

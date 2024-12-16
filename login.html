@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .image-section {
+            background-color: #535c68;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .login-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .login-box {
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .login-box h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .login-box p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 1em;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #111;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .login-box a {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="login.jpg" alt="Meditation">
+        </div>
+        <div class="login-section">
+            <div class="login-box">
+                <h3>TANESA  AUTOWORLD!</h3>
+                <p>Login please</p>
+                <div class="error" id="error-message"></div>
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="validateLogin()">Login</button>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-message" id="success-message">
+        Login successful!
+    </div>
+
+    <script>
+        const validEmails = ['jaroldtanesa@gmail.com']; 
+        const validPassword = 'garage123'; 
+
+        function validateLogin() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            const successMessage = document.getElementById('success-message');
+
+            if (!validEmails.includes(email)) {
+                errorMessage.textContent = 'Invalid email. Please use a registered Google email.';
+                successMessage.style.display = 'none';
+                setTimeout(() => {
+                    errorMessage.textContent = '';
+                }, 1000);
+            } else if (password !== validPassword) {
+                errorMessage.textContent = 'Incorrect password.';
+                successMessage.style.display = 'none';
+                setTimeout(() => {
+                    errorMessage.textContent = '';
+                }, 1000); 
+            } else {
+                errorMessage.textContent = '';
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = 'landingPage.html';
+                }, 2000); 
+            }
+        }
+    </script>
+</body>
+</html>
